@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+	<!--Creatures-->
+	<!--Conversation parts Showcase-->
+	<object Name="Brothers_Library_Conversation_Tester" Inherits="BaseHumanoid">
+		<part Name="Description" Short="This individual is perfect to test conversation parts." />
+		<part Name="Brain" Wanders="false" Hostile="false" Factions="Playerneutral-100" />
+		<part Name="Render" DisplayName="conversation parts tester" ColorString="&amp;y" DetailColor="R" />
+		<part Name="ConversationScript" ConversationID="Brothers_Library_Showcase" />
+		<tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+	</object>
+
+</objects>
