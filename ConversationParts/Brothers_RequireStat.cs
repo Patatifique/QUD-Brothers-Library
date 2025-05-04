@@ -1,15 +1,12 @@
-﻿// This is a new conversation part for checking player stats in conversations and have the option show up as grayed out if player doesn't have the part.
-// Usage in xml is as follows: <part Name="RequirePart" Part="part checked (from class name)" Render="display of requirement ingame" />
-// If Render is not set, it will use the name of the part
-
-using XRL.World.Conversations.Parts;
+// This is a new conversation part for checking player stats in conversations.
+// Usage in xml is as follows: <part Name="RequireStat" Stat="stat checked" Value="value wanted" />
 
 namespace XRL.World.Conversations.Parts
 {
-    public class RequirePart : IConversationPart
+    public class Brothers_RequireStat : IConversationPart
     {
-        public string Part;
-        public string Render;
+        public string Stat;
+        public int Value = int.MaxValue;
         public bool Fulfilled;
 
         public override bool WantEvent(int ID, int Propagation)
@@ -23,10 +20,10 @@ namespace XRL.World.Conversations.Parts
 
         public override bool HandleEvent(PrepareTextEvent E)
         {
-            if (!string.IsNullOrEmpty(Part))
+            if (!string.IsNullOrEmpty(Stat))
             {
                 GameObject subject = The.Player;
-                this.Fulfilled = subject.HasPart(Part);
+                this.Fulfilled = subject.Stat(Stat) >= Value;
             }
             return base.HandleEvent(E);
         }
@@ -39,7 +36,7 @@ namespace XRL.World.Conversations.Parts
         public override bool HandleEvent(GetChoiceTagEvent E)
         {
             char ch = this.Fulfilled ? 'C' : 'r';
-            E.Tag = $"{{{{{ch}|[{Render ?? Part}]}}}}";
+            E.Tag = $"{{{{{ch}|[{Stat} ≥ {Value}]}}}}";
             return false;
         }
 

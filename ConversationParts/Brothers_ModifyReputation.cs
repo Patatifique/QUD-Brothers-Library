@@ -1,6 +1,6 @@
 ﻿// This is a conversation part that modifies the player's reputation with one or two specified faction when used
 // It also displays the reputation change in the dialogue choice as a color-coded tag
-// Usage in XML: <part Name="ModifyReputation" Faction="Tortoises" Value="100" Faction2="Issachari" Value2="-100" Shown="True" />
+// Usage in XML: <part Name="Brothers_ModifyReputation" Faction="Tortoises" Value="100" Faction2="Issachari" Value2="-100" Shown="True" />
 
 // If Faction is not set, it defaults to the speaker's primary faction.
 // If Shown is false or not set, the tag won't be rendered
@@ -11,7 +11,7 @@ using XRL.World.Conversations.Parts;
 
 namespace XRL.World.Conversations.Parts
 {
-    public class ModifyReputation : IConversationPart
+    public class Brothers_ModifyReputation : IConversationPart
     {
         public string Faction;
         public int Value = int.MaxValue;

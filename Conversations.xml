@@ -13,21 +13,21 @@
 			
 			<choice Target="Ego">
 				<text>This dialog can only be selected with at least 20 Ego.</text>
-				<part Name="RequireStat" Stat="Ego" Value="20" />
+				<part Name="Brothers_RequireStat" Stat="Ego" Value="20" />
 			</choice>
 				<!--You can replace Ego with any other stat including but not limited to Level, AV, DV, MA or any attribute or elemental resistance.-->
 
 			<choice Target="Carapace">
 				<text>This dialog can only be selected if you have the Carapace mutation.</text>
-				<part Name="RequirePart" Part="Carapace" Render="Mutation: Carapace" />
+				<part Name="Brothers_RequirePart" Part="Carapace" Render="Mutation: Carapace" />
 			</choice>
 				<!--You can use both Mutations or Skills for the required part. You can set anything as Render, and if it is not set, it will default to the Part's default name.-->
 
 			<choice Target="Scary">
 				<text>This dialog can only be selected if you have the Menacing Stare skill.</text>
-				<part Name="RequirePart" Part="Persuasion_MenacingStare" Render="Your gaze is very menacing" />
+				<part Name="Brothers_RequirePart" Part="Persuasion_MenacingStare" Render="Your gaze is very menacing" />
 			</choice>
-				<!--Alternate use of RequirePart, used for skills, with another Render value.-->
+				<!--Alternate use of Brothers_RequirePart, used for skills, with another Render value.-->
 
 			<choice Target="Reputation">I wanna try modifying reputations.</choice>
 			<choice Target="End">Live and drink, sample conversation.</choice>
@@ -39,35 +39,35 @@
 				What do you want to say? 
 			</text>
 			
-			<!--Below are various examples of ModifyReputation.-->
+			<!--Below are various examples of Brothers_ModifyReputation.-->
 			<choice Target="LoveFarmers">
 				<text>I love farmers.</text>
-			<part Name="ModifyReputation" Faction="Farmers" Value="100" Shown="True" />
+			<part Name="Brothers_ModifyReputation" Faction="Farmers" Value="100" Shown="True" />
 			</choice>
 			
 			<choice Target="LoveFarmersHidden">
 				<text>I unexpectedly love farmers.</text>
-			<part Name="ModifyReputation" Faction="Farmers" Value="100" Shown="False" />
+			<part Name="Brothers_ModifyReputation" Faction="Farmers" Value="100" Shown="False" />
 			</choice>
 			
 			<choice Target="HateBirds">
 				<text>I hate birds.</text>
-			<part Name="ModifyReputation" Faction="Birds" Value="-100" Shown="True" />
+			<part Name="Brothers_ModifyReputation" Faction="Birds" Value="-100" Shown="True" />
 			</choice>				
 				
 			<choice Target="LoveCatsDogs">
 				<text>I love both cats and dogs.</text>
-			<part Name="ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="100" Shown="True" />
+			<part Name="Brothers_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="100" Shown="True" />
 			</choice>	
 
 			<choice Target="HateCatsDogs">
 				<text>I hate both cats and dogs.</text>
-			<part Name="ModifyReputation" Faction="Cats" Value="-100" Faction2="Dogs" Value2="-100" Shown="True" />
+			<part Name="Brothers_ModifyReputation" Faction="Cats" Value="-100" Faction2="Dogs" Value2="-100" Shown="True" />
 			</choice>			
 
 			<choice Target="LoveCatsHateDogs">
 				<text>I love cats but I hate dogs.</text>
-			<part Name="ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="-100" Shown="True" />
+			<part Name="Brothers_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="-100" Shown="True" />
 			</choice>
 			
 			<choice Target="End">Live and drink, sample conversation.</choice>
