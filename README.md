@@ -7,24 +7,24 @@ This mod countains various parts and features used most notably in the Faction E
 ## New Conversation Parts
 The mod countains several new parts that can be called in any .xml conversation. You will find in the mod's files a sample conversation countaining various example of how said parts can be used, but here is a quick rundown.
 
-### `RequirePart`
+### `Brothers_RequirePart`
 
-Although the game already has the IfHavePart predicate that only displays a dialogue option if you have the relevant part (be it mutation or skill), the RequirePart conversation part will actually display the dialogue option greyed out if you lack the relevant part, as well as the needed part in brackets.
-
-```xml
-<part Name="RequirePart" Part="Carapace" Render="Mutation: Carapace" />
-```
-### `RequireStat`
-
-Similarly to the game's RequireReputation or this mod's RequirePart, RequireStat lets you display dialogue options that require a minimum attribute to select. If that minimum is not met, the option will be greyed out.
+Although the game already has the IfHavePart predicate that only displays a dialogue option if you have the relevant part (be it mutation or skill), the Brothers_RequirePart conversation part will actually display the dialogue option greyed out if you lack the relevant part, as well as the needed part in brackets.
 
 ```xml
-<part Name="RequireStat" Stat="Ego" Value="20" />
+<part Name="Brothers_RequirePart" Part="Carapace" Render="Mutation: Carapace" />
+```
+### `Brothers_RequireStat`
+
+Similarly to the game's RequireReputation or this mod's Brothers_RequirePart, Brothers_RequireStat lets you display dialogue options that require a minimum attribute to select. If that minimum is not met, the option will be greyed out.
+
+```xml
+<part Name="Brothers_RequireStat" Stat="Ego" Value="20" />
 ```
 
-### `ModifyReputation`
+### `Brothers_ModifyReputation`
 
 This part allows for manipulation of reputations through dialogue options. Up to two separate reputations can be either increased or decreased with a single dialogue option.
 
 ```xml
-<part Name="ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="-100" Shown="True" />
+<part Name="Brothers_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="-100" Shown="True" />
