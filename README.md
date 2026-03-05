@@ -1,7 +1,6 @@
 # Brother's Modding Library
 
 This mod contains various parts and features used most notably in the Faction Expansion mods. The mods it's used in are specified for each part so you can refer back to them if you have any doubt about usage.
-You will find below a non-exhaustive list of the mod's content. Feel free to use it for your own mods!
 
 ---
 
@@ -21,6 +20,9 @@ Although the game already has the `IfHavePart` predicate that only displays a di
 <part Name="Brothers_RequirePart" Part="Carapace" Render="Mutation: Carapace" />
 ```
 
+*Notably used in:*
+[Walking Dune conversation](https://github.com/Patatifique/QUD-Faction-Expansion-Tortoises/blob/main/MiscBlueprints/Conversations.xml)
+
 ---
 
 ### `Brothers_RequireStat`
@@ -31,6 +33,9 @@ Similarly to the game's `RequireReputation` or this mod's `Brothers_RequirePart`
 <part Name="Brothers_RequireStat" Stat="Ego" Value="20" />
 ```
 
+*Notably used in:*
+[Poacher conversation](https://github.com/Patatifique/QUD-Faction-Expansion-Tortoises/blob/main/MiscBlueprints/Conversations.xml)
+
 ---
 
 ### `Brothers_ModifyReputation`
@@ -40,6 +45,9 @@ This part allows for manipulation of reputations through dialogue options. Up to
 ```xml
 <part Name="Brothers_ModifyReputation" Faction="Cats" Value="100" Faction2="Dogs" Value2="-100" Shown="True" />
 ```
+
+*Notably used in:*
+[Warden conversation](https://github.com/Patatifique/QUD-Faction-Expansion-CatsAndDogs/blob/main/MiscBlueprints/Conversations.xml)
 
 ---
 
@@ -63,6 +71,9 @@ Can be used as:
 
 In this example, the option will only appear if the speaker’s evolutive stage is 2 or higher.
 
+*Notably used in:*
+[Dog Chef conversation](https://github.com/Patatifique/QUD-Faction-Expansion-CatsAndDogs/blob/main/MiscBlueprints/Conversations.xml)
+
 ---
 
 ### `Brothers_GiveRecipe`
@@ -80,6 +91,9 @@ If the player does not already know the recipe, it will:
     Teach me this recipe.
 </choice>
 ```
+
+*Notably used in:*
+[Dog Chef conversation](https://github.com/Patatifique/QUD-Faction-Expansion-CatsAndDogs/blob/main/MiscBlueprints/Conversations.xml)
 
 ---
 
@@ -114,7 +128,9 @@ To advance the stage in code:
 gameObject.FireEvent(Event.New("Brothers_ChangeEvolutiveState"));
 ```
 
----
+*Notably used in:*
+[Hydric Hound blueprint sets up the tiles](https://github.com/Patatifique/QUD-Faction-Expansion-CatsAndDogs/blob/main/ObjectBlueprints/Creatures.xml)
+[HydraDog part fires evolve tile event](https://github.com/Patatifique/QUD-Faction-Expansion-CatsAndDogs/blob/main/Parts/Brothers_HydraDog.cs)
 
 ---
 
@@ -128,10 +144,9 @@ It was made mainly for unarmed attacks, but can be used for any weapon type by a
 
 `AttackMessage` can also be customized :>
 
-#### Example usage
-
 ```xml
 <part Name="Brothers_ElementalDamageOnHit" WorksOnEquipper="true" Type="Cold" RequireDamageAttribute="Unarmed" Amount="3d2" />
 ```
 
-
+*Notably used in:*
+[Hyrk Cestus blueprint](https://github.com/Patatifique/QUD-Faction-Expansion-CatsAndDogs/blob/main/ObjectBlueprints/Items.xml)
