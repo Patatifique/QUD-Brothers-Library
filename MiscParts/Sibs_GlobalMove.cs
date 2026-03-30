@@ -7,7 +7,7 @@ using XRL.UI;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_GlobalMove : IPart
+    public class Sibs_GlobalMove : IPart
     {
         // Destination (zone + cell)
         public string TargetZone;

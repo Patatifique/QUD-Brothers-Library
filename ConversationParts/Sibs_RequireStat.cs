@@ -3,7 +3,7 @@
 
 namespace XRL.World.Conversations.Parts
 {
-    public class Brothers_RequireStat : IConversationPart
+    public class Sibs_RequireStat : IConversationPart
     {
         public string Stat;
         public int Value = int.MaxValue;
