@@ -4,7 +4,7 @@ using XRL.World;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_BoolStateTimer : IPart
+    public class Sibs_BoolStateTimer : IPart
     {
         public long startTurn;
         public long targetTurns;

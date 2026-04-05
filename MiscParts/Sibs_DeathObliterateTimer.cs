@@ -6,7 +6,7 @@ namespace XRL.World.Parts
 {
 
     [Serializable]
-    public class Brothers_DeathObliterateTimer : IPart
+    public class Sibs_DeathObliterateTimer : IPart
     {
         public int Timer = 5;
         public bool Obliterate = false;

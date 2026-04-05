@@ -6,13 +6,13 @@ using XRL.Messages;
 namespace XRL.World.Parts
 {
   [Serializable]
-  public class Brothers_ElementalDamageOnHit : IActivePart
+  public class Sibs_ElementalDamageOnHit : IActivePart
   {
     // This part applies elemental damage on hit. 
     // It can be configured to work on the wielder's hits or the weapon's hits as opposed to the regular ElementalDamage part.
     // It was made mainly for unarmed attacks, but can be used for any weapon type by adjusting the RequireDamageAttribute field.
     // AttackMessage can also be customized :>
-    // Example usage: <part Name="Brothers_ElementalDamageOnHit" WorksOnEquipper= "true" Type="Cold" RequireDamageAttribute="Unarmed" Amount="3d2"
+    // Example usage: <part Name="Sibs_ElementalDamageOnHit" WorksOnEquipper= "true" Type="Cold" RequireDamageAttribute="Unarmed" Amount="3d2"
 
     
     public string Amount = "1d3";
@@ -20,7 +20,7 @@ namespace XRL.World.Parts
     public string RequireDamageAttribute;
     public string AttackMessage= "from %t attack.";
 
-    public Brothers_ElementalDamageOnHit() => this.WorksOnSelf = true;
+    public Sibs_ElementalDamageOnHit() => this.WorksOnSelf = true;
     
     public override bool WantEvent(int ID, int cascade)
     {

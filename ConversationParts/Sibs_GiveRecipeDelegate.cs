@@ -1,6 +1,6 @@
 // This is a simple reusable conversation delegate that allows an NPC to teach the player a cooking recipe.
 // To use it in XML, add it as an attribute on a <choice> element like so:
-// <choice Target="End" Brothers_GiveRecipe="RecipeClassName">Teach me this recipe.</choice>
+// <choice Target="End" Sibs_GiveRecipe="RecipeClassName">Teach me this recipe.</choice>
 // The string value ("RecipeClassName") must match the class name of a cooking recipe in XRL.World.Skills.Cooking.
 // When the player selects the choice, the delegate will give them the recipe and show a popup message.
 
@@ -13,10 +13,10 @@ using XRL.World.Skills.Cooking;
 namespace XRL.World.Conversations
 {
     [HasConversationDelegate]
-    public static class Brothers_GiveRecipeDelegate
+    public static class Sibs_GiveRecipeDelegate
     {
         [ConversationDelegate]
-        public static void Brothers_GiveRecipe(DelegateContext Context)
+        public static void Sibs_GiveRecipe(DelegateContext Context)
         {
             if (string.IsNullOrEmpty(Context.Value))
                 return;

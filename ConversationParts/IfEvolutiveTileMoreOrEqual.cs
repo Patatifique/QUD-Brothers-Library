@@ -20,9 +20,9 @@ namespace XRL.World.Conversations
         [ConversationDelegate(Speaker = true)]
         public static bool IfEvolutiveTileMoreOrEqual(DelegateContext Context)
         {
-            Brothers_EvolutiveTile evolutiveTile;
+            Sibs_EvolutiveTile evolutiveTile;
 
-            if (!Context.Target.TryGetPart<Brothers_EvolutiveTile>(out evolutiveTile))
+            if (!Context.Target.TryGetPart<Sibs_EvolutiveTile>(out evolutiveTile))
             {
                 return false;
             }
