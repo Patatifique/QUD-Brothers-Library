@@ -1,4 +1,4 @@
-# Brother's Modding Library
+# Siblings' Modding Library
 
 This mod contains various parts and features used most notably in the Faction Expansion mods. The mods it's used in are specified for each part so you can refer back to them if you have any doubt about usage.
 

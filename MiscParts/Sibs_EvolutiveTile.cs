@@ -1,5 +1,5 @@
 // This is a simple reusable part that allows an object to have a tile that changes based on its "evolutive stage".
-// The stage can be changed by firing the "Brothers_ChangeEvolutiveState" event on the object.
+// The stage can be changed by firing the "Sibs_ChangeEvolutiveState" event on the object.
 
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using XRL.Messages;
 namespace XRL.World.Parts
 {
     [Serializable]
-    public class Brothers_EvolutiveTile : IPart
+    public class Sibs_EvolutiveTile : IPart
     {
         public int Stage = 0;
 
@@ -73,13 +73,13 @@ namespace XRL.World.Parts
         // Main stage change event
         public override void Register(GameObject Object, IEventRegistrar Registrar)
         {
-            Registrar.Register("Brothers_ChangeEvolutiveState");
+            Registrar.Register("Sibs_ChangeEvolutiveState");
             base.Register(Object, Registrar);
         }
 
         public override bool FireEvent(Event E)
         {
-            if (E.ID == "Brothers_ChangeEvolutiveState")
+            if (E.ID == "Sibs_ChangeEvolutiveState")
             {
                 // increase stage
                 Stage++;

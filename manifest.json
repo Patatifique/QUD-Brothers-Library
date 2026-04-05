@@ -1,8 +1,8 @@
 {
-    "id": "Github_Brothers_Library",
-    "title": "(Github) Brothers' Modding Library",
+    "id": "Github_Sibs_Library",
+    "title": "(Github) Siblings' Modding Library",
     "description": "Adds various parts used in Faction Expansion mods, including additional conversation parts.",
-    "version": "2.0",
+    "version": "2.1",
     "author": "{{tarnished|Balthichou}} and {{lovesickness|Patatifique}}",
     "tags": "Library",
     "PreviewImage": "library-preview.png"

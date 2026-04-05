@@ -1,12 +1,12 @@
 ﻿// This is a new conversation part for checking player stats in conversations and have the option show up as grayed out if player doesn't have the part.
-// Usage in xml is as follows: <part Name="Brothers_RequirePart" Part="part checked (from class name)" Render="display of requirement ingame" />
+// Usage in xml is as follows: <part Name="Sibs_RequirePart" Part="part checked (from class name)" Render="display of requirement ingame" />
 // If Render is not set, it will use the name of the part
 
 using XRL.World.Conversations.Parts;
 
 namespace XRL.World.Conversations.Parts
 {
-    public class Brothers_RequirePart : IConversationPart
+    public class Sibs_RequirePart : IConversationPart
     {
         public string Part;
         public string Render;
